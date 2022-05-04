@@ -8,10 +8,10 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class TodolistController extends AbstractController
 {
-    #[Route('/todolist', name: 'app_todolist')]
+    #[Route('/', name: 'app_todolist')]
     public function index(): Response
     {
-        return $this->render('todolist/index.html.twig', [
+        return $this->render('todolist/todo.html.twig', [
             'controller_name' => 'TodolistController',
         ]);
     }
